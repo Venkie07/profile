@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Journey – Venkie</title>
+  <link rel="stylesheet" href="journey.css" />
+</head>
+<body>
+
+    <!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">My life Story</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <section class="journey-section">
+    <h1>My Journey ✈</h1>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p>Born on <strong>September 1 👼</strong> with dreams yet to be written.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2009–2024</span>
+        <p>🏫 Schooling at <strong>New Century Matric. Hr. Sec. School</strong> from LKG to 12th.</p>
+      </div>
+      <div class="timeline-item"><span class="year">2022</span><p>Completed <strong>SSLC</strong> under the State Board.</p></div>
+      <div class="timeline-item"><span class="year">2023</span><p>Stepped into the world of <strong>HSC – 1st Year</strong>.</p></div>
+      <div class="timeline-item"><span class="year">2024</span><p>Graduated HSC and joined <strong>Sri Sairam Institute of Technology</strong>.</p></div>
+      <div class="timeline-item"><span class="year">2024–2028</span><p>👨‍🎓 Pursuing <strong>B.Tech AI & DS</strong> with curiosity and passion.</p></div>
+      <div class="timeline-item"><span class="year">Future</span><p>Dreaming to work in a top company with a great package. 💼✨ <br> A Happy Family!😊</p></div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      navbar.style.top = scrollTop > lastScrollTop ? "-80px" : "0";
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+
+</body>
+</html>

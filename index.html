@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Self – Venkie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+    <!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">Home</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="index-profile.jpg" alt="Profile" class="profile-pic" />
+      <h1>My Self</h1>
+      <p>A Journey of Passion, Code & Purpose</p>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    window.addEventListener("load", () => {
+      document.querySelector(".loader-container").style.display = "none";
+    });
+
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      const icon = document.getElementById("hamburger");
+      nav.classList.toggle("show");
+      icon.textContent = nav.classList.contains("show") ? "✖" : "☰";
+    }
+  </script>
+  <script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

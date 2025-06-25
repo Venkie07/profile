@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Venkateswaran</title>
+  <link rel="stylesheet" href="contact.css" />
+  <style>
+    .odometer-digit {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: 900;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mini profile on scroll -->
+<div class="profile-mini" id="miniProfile">
+  <img src="image-6.jpg" alt="Mini Profile" />
+  <span>Venkateswaran</span>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">Connect Me At</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>Let's Connect</h1>
+  <div class="profile-pic">
+    <img src="image-6.jpg" alt="Profile" />
+  </div>
+  <h2 class="name">Venkateswaran</h2>
+</header>
+
+<!-- Contact Cards -->
+<section class="contact-cards">
+  <div class="card"><span>Phone no:</span> <a href="tel:+917338721949">+91 73387 21949</a></div>
+  <div class="card"><span>Email:</span> <a href="mailto:venkateswaran01092007@gmail.com">Mail ID ✉</a></div>
+  <div class="card"><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/venkateswaran-k-401573340">LinkedIn 🔗</a></div>
+  <div class="card"><span>Instagram:</span> <a href="https://www.instagram.com/venkates_._2007">Instagram 💜</a></div>
+</section>
+
+<!-- Like Section -->
+<section style="text-align:center; margin-top: 50px;">
+  <p style="font-size: 20px; font-weight: 600;">Did you like My Creation?</p>
+  <button onclick="likeSite()" class="glow-like">💜 Like</button>
+  <p id="likeMessage" style="font-size: 18px; margin-top: 15px; color: #66ffcc; font-family: 'Cursive', 'Comic Sans MS', sans-serif; font-style: italic; font-weight: 600;"></p>
+  <p id="likeCount" style="margin-top: 10px;"></p>
+</section>
+
+<!-- Quote -->
+<footer>
+  <p>"The art of communication is the language of leadership."</p>
+</footer>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyBVAZFpZ3nMTrXb6u9iHc7BywpRIuCZJvc",
+    authDomain: "like-66150.firebaseapp.com",
+    databaseURL: "https://like-66150-default-rtdb.firebaseio.com",
+    projectId: "like-66150",
+    storageBucket: "like-66150.appspot.com",
+    messagingSenderId: "136114365455",
+    appId: "1:136114365455:web:3c936ae8426959f69baf7a"
+  };
+
+  const app = firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+  let oldCount = 0;
+
+  function getLikes() {
+    db.ref("likeCount").on("value", (snapshot) => {
+      const newCount = snapshot.val() || 0;
+      displayOdometer(oldCount, newCount);
+      oldCount = newCount;
+    });
+  }
+
+  function displayOdometer(oldVal, newVal) {
+    const newStr = String(newVal);
+    let html = '<span style="font-size: 20px; font-weight: bold; color: #ffccff; font-style: italic;">💖 Love shared so far: </span>';
+    
+    for (let i = 0; i < newStr.length; i++) {
+      html += `<span class="odometer-digit">${newStr[i]}</span>`;
+    }
+    
+    document.getElementById("likeCount").innerHTML = html;
+  }
+
+  function likeSite() {
+    const likeRef = db.ref("likeCount");
+    likeRef.transaction((current) => (current || 0) + 1);
+
+    const messages = [
+      "You're awesome 💜!",
+      "Thanks for the love!",
+      "Grateful for your support ✨",
+      "You made my day 😄",
+      "Thanks for supporting me! 🚀",
+      "Feeling the good vibes from you! 😊💖",
+      "So glad to have your encouragement! 🎉👏",
+      "Your kindness truly shines. 🌟💫",
+      "Thanks for being so amazing! 🙌😊",
+      "You're the best! Thanks a million. 🤗💯",
+      "Couldn't do it without you! 💪😊",
+      "Your support means the world! 🌍❤️"
+    ];
+    const msg = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("likeMessage").innerText = msg;
+  }
+
+  getLikes();
+
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+
+  window.addEventListener("scroll", () => {
+    const mini = document.getElementById("miniProfile");
+    mini.classList.toggle("show", window.scrollY > 100);
+  });
+
+  const navbar = document.querySelector('.navbar');
+  let lastScrollTop = 0;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    navbar.style.top = scrollTop > lastScrollTop ? "-80px" : "0";
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  });
+</script>
+
+</body>
+</html>

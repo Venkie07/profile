@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career – Venkie</title>
+  <link rel="stylesheet" href="career.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar">
+  <div class="logo">Career</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="career.html">Career</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Career Section -->
+  <section class="career-section">
+    <h1>Career</h1>
+    <p class="intro">
+      I'm working toward becoming a versatile <strong>Software Engineer</strong> or <strong>AI Developer</strong> who builds efficient and human-centered solutions using cutting-edge technology.
+    </p>
+
+    <div class="goal-cards">
+      <div class="card">
+        <h2>🎯 Short-Term Goals</h2>
+        <ul>
+          <li>Master Python, C, and AI tools</li>
+          <li>Intern with a top tech company</li>
+          <li>Achieve 10K+ SkillRack points</li>
+          <li>Contribute to open-source projects</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>🏆 Long-Term Goals</h2>
+        <ul>
+          <li>Develop real-world AI applications</li>
+          <li>Launch successful apps and platforms</li>
+          <li>Work in a global tech environment</li>
+          <li>Empower communities through tech</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="project-heading">🚀 My Dream Projects</h2>
+    <div class="project-cards">
+      <div class="card">
+        <h3>KyroConnect</h3>
+        <p>A smart mobile app that allows users to control their PC via Bluetooth – including trackpad, keyboard, screen mirror & shortcuts.</p>
+      </div>
+      <div class="card">
+        <h3>Annam</h3>
+        <p>A food-sharing platform where hotels list excess food and people in need can collect or request delivery at low cost. Reduces food waste.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px";
+      } else {
+        navbar.style.top = "0";
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+  </script>
+</body>
+</html>
