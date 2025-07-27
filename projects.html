@@ -34,13 +34,19 @@
     <div class="timeline">
 
       <div class="timeline-item">
-  <span class="year">KyroQR</span>
-  <p>
-    <strong>KyroQR</strong> – A customizable QR code generator.Includes features like custom QR style, colour selection, logo at center, various download format, and instant preview.
-    <br>
-    <a href="https://venkie07.github.io/kyroqr/" class="project-btn" target="_blank">Try KyroQR</a>
-  </p>
-</div>
+        <span class="year">KyroQR</span>
+          <p>
+            <strong>KyroQR</strong> – A customizable QR code generator.Includes features like custom QR style, colour selection, logo at center, various download format, and instant preview.
+            <br>
+            <a href="https://venkie07.github.io/kyroqr/" class="project-btn" target="_blank">Try KyroQR</a>
+          </p>
+        <span class="year">Centralized Hub - Kyro Hub</span>
+          <p>
+            <strong>Kyro Hub</strong> - CentralizedHub by Venkie – A single gateway to access all your important and frequently used websites. Fast, clean, and easy-to-use interface by Kyro.
+            <br>
+            <a href="https://venkie07.github.io/central.hub/" class="project-btn" target="_blank">Try Centralized Hub</a>
+          </p>
+      </div>
 
 
     </div>
@@ -53,7 +59,7 @@
 
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {        
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       navbar.style.top = scrollTop > lastScrollTop ? "-80px" : "0";
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
