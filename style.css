@@ -3,9 +3,9 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff00cc, #3333ff);
-  color: white;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -14,24 +14,26 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px 20px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
   box-sizing: border-box;
+  box-shadow: 0 0 12px #00ffe5;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #feffff;
+  text-shadow: 0 0 6px #00ffe5;
 }
 
 .hamburger {
   font-size: 28px;
-  color: white;
+  color: #00ffe5;
   cursor: pointer;
   display: none;
   margin-right: 10px;
@@ -48,14 +50,15 @@ body, html {
 }
 
 .nav-links li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #ff80df;
+  color: #00eeff;
+  text-shadow: 0 0 8px #00d9ff;
 }
 
 /* Hero Section */
@@ -67,6 +70,7 @@ body, html {
   text-align: center;
   background-size: cover;
   padding: 20px;
+  background: radial-gradient(circle at center, #111, #0a0a23);
 }
 
 .hero-content {
@@ -78,9 +82,9 @@ body, html {
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #fff;
+  border: 4px solid #00ffe5;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(255, 0, 200, 0.6);
+  box-shadow: 0 0 20px #00ffe5, 0 0 40px #00ffe5;
   transition: transform 0.3s ease;
 }
 
@@ -91,12 +95,14 @@ body, html {
 .hero h1 {
   font-size: 60px;
   margin: 10px 0;
-  color: #fff;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffe5;
 }
 
 .hero p {
   font-size: 20px;
-  color: #fcd9ff;
+  color: #c0f7ff;
+  text-shadow: 0 0 6px #00ffe5;
 }
 
 /* Responsive Navigation */
@@ -109,7 +115,7 @@ body, html {
   .nav-links {
     flex-direction: column;
     gap: 0px;
-    background: rgba(0, 0, 0, 0.0); /* Invisible unless touched */
+    background: rgba(0, 0, 0, 0.0);
     position: absolute;
     top: 60px;
     right: 20px;
@@ -124,6 +130,7 @@ body, html {
   .nav-links.show {
     max-height: 300px;
     background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 20px #00ffe5;
   }
 
   .nav-links li {
@@ -135,7 +142,7 @@ body, html {
     padding: 12px 0;
     text-align: center;
     background: transparent;
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     border-radius: 0;
     margin: 0;
@@ -144,6 +151,6 @@ body, html {
 
   .nav-links li a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #ff80df;
+    color: #00e1ff;
   }
 }
