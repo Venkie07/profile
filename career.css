@@ -1,8 +1,9 @@
+/* Base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff00cc, #6600ff);
-  color: #fff;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
   padding-top: 80px;
 }
 
@@ -11,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 15px 20px;
   position: fixed;
   width: 100%;
@@ -19,23 +20,27 @@ body {
   z-index: 10;
   transition: top 0.3s;
   box-sizing: border-box;
+  box-shadow: 0 0 12px #00ffe5;
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
+  text-shadow: 0 0 6px #00ffe5;
 }
 
+/* Hamburger */
 .hamburger {
   font-size: 28px;
-  color: white;
+  color: #00ffe5;
   cursor: pointer;
   display: none;
   margin-right: 10px;
   transition: all 0.3s ease;
 }
 
+/* Nav Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -45,17 +50,18 @@ body {
 }
 
 .nav-links li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav-links li a:hover {
-  color: #ff80df;
+  color: #00eeff;
+  text-shadow: 0 0 8px #00d9ff;
 }
 
-/* Responsive Navigation */
+/* Responsive Nav */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -80,6 +86,7 @@ body {
   .nav-links.show {
     max-height: 300px;
     background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 20px #00ffe5;
   }
 
   .nav-links li a {
@@ -87,7 +94,7 @@ body {
     padding: 12px 0;
     text-align: center;
     background: transparent;
-    color: white;
+    color: #ffffff;
     font-weight: 600;
     margin: 0;
     transition: background 0.3s, color 0.3s;
@@ -95,7 +102,7 @@ body {
 
   .nav-links li a:hover {
     background: rgba(255, 255, 255, 0.1);
-    color: #ff80df;
+    color: #00e1ff;
   }
 }
 
@@ -108,9 +115,11 @@ body {
 .career-section h1 {
   font-size: 50px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #00ffe5;
   display: inline-block;
   padding-bottom: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00ffe5;
 }
 
 .intro {
@@ -119,9 +128,13 @@ body {
   margin: auto;
   margin-bottom: 40px;
   line-height: 1.8;
+  color: #c0f7ff;
+  text-shadow: 0 0 4px #00ffe5;
 }
 
-.goal-cards, .project-cards {
+/* Cards */
+.goal-cards,
+.project-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -132,24 +145,35 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
-  border: 1px solid #fff2;
+  border: 1px solid #00ffe522;
   border-radius: 12px;
   width: 300px;
   backdrop-filter: blur(5px);
   text-align: left;
+  box-shadow: 0 0 12px #00ffe5;
+  transition: transform 0.3s ease;
 }
 
-.card h2, .card h3 {
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px #00ffe5;
+}
+
+.card h2,
+.card h3 {
   color: #ffd6f9;
   margin-bottom: 10px;
+  text-shadow: 0 0 6px #00fff2;
 }
 
 .card ul {
   padding-left: 20px;
 }
 
+/* Project Heading */
 .project-heading {
   font-size: 30px;
   margin-bottom: 20px;
   color: #ffccf9;
+  text-shadow: 0 0 8px #a7e6ff;
 }
