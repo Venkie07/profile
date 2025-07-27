@@ -6,7 +6,7 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #ff00cc, #3333ff);
   color: white;
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* Navbar */
