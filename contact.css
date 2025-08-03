@@ -160,7 +160,11 @@ header {
   text-decoration: underline;
   word-break: break-word;
 }
-
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 /* Like Button */
 button.glow-like {
   font-size: 24px;
@@ -253,3 +257,4 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
