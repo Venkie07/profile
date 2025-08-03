@@ -19,6 +19,23 @@
       color: white;
       font-family: 'Segoe UI', sans-serif;
     }
+        .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card {
+      padding: 10px 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #f9f9f9;
+      transition: background 0.3s ease;
+    }
+    .card:hover {
+      background: #d0f0ff;
+      cursor: pointer;
+    }    
   </style>
 </head>
 <body>
@@ -54,15 +71,32 @@
 
 <!-- Contact Cards -->
 <section class="contact-cards">
-  <div class="card"><span><b>Phone no:</b></span> <a href="tel:+917338721949">+91 73387 21949</a></div>
-  <div class="card"><span><b>Email:</b></span> <a href="mailto:venkateswaran01092007@gmail.com">Mail ID ✉</a></div>
-  <div class="card"><span><b>WhatsApp:</b></span> <a href="https://wa.me/917338721949">Chat 💬</a></div>
-  <div class="card"><span><b>LinkedIn:</b></span> <a href="https://www.linkedin.com/in/venkateswaran-k-401573340">LinkedIn 🔗</a></div>
-  <div class="card"><span><b>Instagram:</b></span> <a href="https://www.instagram.com/venkates_._2007">Instagram 💜</a></div>
-  <div class="card"><span><b>GitHub:</b></span> <a href="https://github.com/Venkie07">GitHub 🌐</a></div>
-  <div class="card"><span><b>LeetCode:</b></span> <a href="https://leetcode.com/u/Venkie_/">LeetCode 👨‍💻</a></div>
-  <div class="card"><span><b>HackerRank:</b></span> <a href="https://www.hackerrank.com/profile/venkie_">HackerRank 👾</a></div>
+  <a href="tel:+917338721949" class="card-link">
+    <div class="card"><span><b>Phone no:</b></span> +91 73387 21949</div>
+  </a>
+  <a href="mailto:venkateswaran01092007@gmail.com" class="card-link">
+    <div class="card"><span><b>Email:</b></span> Mail ID ✉</div>
+  </a>
+  <a href="https://wa.me/917338721949" class="card-link" target="_blank">
+    <div class="card"><span><b>WhatsApp:</b></span> Chat 💬</div>
+  </a>
+  <a href="https://www.linkedin.com/in/venkateswaran-k-401573340" class="card-link" target="_blank">
+    <div class="card"><span><b>LinkedIn:</b></span> LinkedIn 🔗</div>
+  </a>
+  <a href="https://www.instagram.com/venkates_._2007" class="card-link" target="_blank">
+    <div class="card"><span><b>Instagram:</b></span> Instagram 💜</div>
+  </a>
+  <a href="https://github.com/Venkie07" class="card-link" target="_blank">
+    <div class="card"><span><b>GitHub:</b></span> GitHub 🌐</div>
+  </a>
+  <a href="https://leetcode.com/u/Venkie_/" class="card-link" target="_blank">
+    <div class="card"><span><b>LeetCode:</b></span> LeetCode 👨‍💻</div>
+  </a>
+  <a href="https://www.hackerrank.com/profile/venkie_" class="card-link" target="_blank">
+    <div class="card"><span><b>HackerRank:</b></span> HackerRank 👾</div>
+  </a>
 </section>
+
 
 <!-- Like Section -->
 <section style="text-align:center; margin-top: 50px;">
@@ -160,4 +194,5 @@
 
 </body>
 </html>
+
 
